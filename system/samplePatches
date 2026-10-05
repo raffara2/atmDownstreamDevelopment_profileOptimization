@@ -1,0 +1,28 @@
+//rv start
+// -*- C++ -*-
+
+samplePatches
+{
+    type            surfaces;
+    libs            (sampling);
+    writeControl    writeTime; 
+    surfaceFormat   raw;
+    fields          (U k epsilon nut);
+
+    surfaces
+    {
+        inletProfile
+        {
+            type        patch;
+            patches     (inlet);
+            interpolate false; 
+        }
+        outletProfile
+        {
+            type        patch;
+            patches     (outlet);
+            interpolate false; 
+        }
+    }
+}
+//rv end
